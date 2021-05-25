@@ -38,8 +38,13 @@ jQuery           |        |                      |          |         |         
 ## Webstie Demo
 ### 明信片--簡易畫板
 ![image](https://github.com/shang-jui/group/blob/master/group-postcardDraw.gif)
+- 使用Canvas製作簡易的畫板
+- 可清除、改變顏色及畫筆粗細
 ### 明信片--製作明信片
 ![image](https://github.com/shang-jui/group/blob/master/group-postcardDo.gif)
+- 可選擇背景圖、圖樣及撰寫內文
+- 圖樣及內文可在明信片內自行移動
+- 可刪除或改變內文大小及顏色
 ### 明信片--下載及寄出
 ![image](https://github.com/shang-jui/group/blob/master/group-postcarddown.gif)
 
