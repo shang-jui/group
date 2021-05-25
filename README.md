@@ -42,12 +42,23 @@ jQuery           |        |                      |          |         |         
 - 可清除、改變顏色及畫筆粗細
 ### 明信片--製作明信片
 ![image](https://github.com/shang-jui/group/blob/master/group-postcardDo.gif)
-- 使用PHP語法搭配前端AJAX方法取得資料庫即時資料
+- 建置PHP搭配前端AJAX方法取得資料庫(MySQL)即時資料
 - 可選擇背景圖、撰寫內文並使用drop and drag選擇圖樣
 - 使用draggable方法圖樣及內文可在明信片內自行移動
 - 可刪除或改變內文大小及顏色
 ### 明信片--下載及寄出
 ![image](https://github.com/shang-jui/group/blob/master/group-postcarddown.gif)
 - 使用html2canvas方法下載圖片
-- 使用PHP語法搭配前端AJAX方法即時寄出Mail
+- 建置PHP搭配前端AJAX方法即時寄出Mail
+### 高級會員展間
+![image](https://github.com/shang-jui/group/blob/master/group-highmember.gif)
+- 使用原生JS撰寫左右選擇輪播圖
+- 分享功能
+- 線上留言板
+- 建置PHP搭配AJAX方法
+  - 載入作品於資料庫(MySQL)即時資訊(作品內容、按讚人數、是否訂閱、留言板)
+  - 即時更新資料庫(MySQL)(按讚人數、是否訂閱、留言資訊)
+### 高級會員後台
+
+
 
