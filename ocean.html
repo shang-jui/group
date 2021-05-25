@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/all.css">
+  <link rel="stylesheet" href="./assets/css/pages/signin.css">
+  <link rel="stylesheet" href="./assets/css/pages/work.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Montserrat:wght@300&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <script src="./assets/js/jquery-3.5.1.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="5123688312-hh38n162r8fqfrd31n2a2hid0q7pk7uf.apps.googleusercontent.com">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"
+    integrity="sha512-c5JDIvikBZ6tuz+OyaFsHKvuyg+tCug3hf41Vmmd5Yz9H5anj4vZOqlBV5PJoEbBJGFCgKoRT9YAgko4JS6/Qw=="
+    crossorigin="anonymous"></script>
+
+  <title>海洋 Ocean</title>
+</head>
+
+<body>
+
+  <!-- -----header----- -->
+  <header class="indexSideBar">
+    <a class="logoForIndex mousehover" href="../dist/homepage.html">
+        <img src="./assets/img/logo_bowu_white.png">
+    </a>
+
+    <menu class="menu mousehover">
+        <p>MENU</p>
+        <div class="menuOpenCloseAni">
+            <span class="indexMenuline1"></span>
+            <span class="indexMenuline2"></span>
+        </div>
+    </menu>
+
+    <div class="smallSize_menuOpenCloseAni">
+        <span class="smallSize_indexMenuline1"></span>
+        <span class="smallSize_indexMenuline2"></span>
+    </div>
+
+    <!-- 選單頁面 -->
+    <div class="menu_bar none">
+
+        <div class="menuGsapLine"></div>
+        <div class="smallSizeCloseBtn">
+            <div></div>
+        </div>
+
+        <div class="exhibits-title-outer mousehover">
+            <div class="exhibits-titleHover"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL
+                    EXHIBITS</a></div>
+            <div class="exhibits-title"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a>
+            </div>
+        </div>
+
+        <div class="menu_about menu_child">
+            <a class="mousehover" href="../dist/About.html">
+                <img src="./assets/img/menu_about.png">
+                About
+            </a>
+        </div>
+
+        <div class="menu_exhibits menu_child">
+            <a class="mousehover" href="../dist/exhibition.html">
+                <img src="./assets/img/menu_exhibits.png" alt="">Exhibits</a>
+        </div>
+
+        <div class="menu_postcard menu_child">
+            <a class="mousehover" href="../dist/postcard.html">
+                <img src="./assets/img/menu_postcard.png" alt="">PostCard</a>
+        </div>
+
+        <div class="notthings menu_child">
+            <a href=""></a>
+        </div>
+
+        <div class="join mousehover">
+            <div class="line"></div>
+            <div class="join-title-outer">
+                <div class="join-title"><a href="##">JOIN US NOW</a></div>
+                <div class="join-titleHover"><a href="##">JOIN US NOW</a></div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li> <a href="#" class="mousehover">SHARE</a> </li>
+        <b></b>
+        <li> <a href="./About.html" class="mousehover">CONTACT US</a> </li>
+    </ul>
+</header>
+
+
+<div class="sharingBoxAll" style="display: none;">
+    <div class="sharingBoxBg"></div>
+    <div class="sharingBox">
+        <p>
+            SHARING BOWU-MUSEUM<br> WITH YOUR FRIEND!
+        </p>
+        <div class="sharingBtn">
+            <ul class="share-buttons" data-source="simplesharingbuttons.com">
+                <li><a class="mousehover" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.2.0.172%2Fdist%2F&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+                <li><a class="mousehover" href="https://twitter.com/intent/tweet?source=http%3A%2F%2F10.2.0.172%2Fdist%2F&text=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+                <li><a class="mousehover" href="https://plus.google.com/share?url=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+                <li><a class="mousehover" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.2.0.172%2Fdist%2F&title=&summary=&source=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a></li>
+                <li><a class="mousehover" href="mailto:?subject=&body=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+  <!-- <div class="features">
+    <i class="fas fa-search"></i>
+    <div class="personal"><a href="./exhibition.html">個人展間</a>
+    </div>
+
+
+    <div class="login"><a href="###" class="login_manger">管理</a>
+        <i class="fas fa-user-friends"></i>
+    </div>
+
+    <i class="fas fa-bell"></i>
+</div> -->
+
+<div id="searchBarALL">
+    <div class="searchBarBlack" @click="searchBarClose" :class="{'-active': searchBarBg}"></div>
+    <div class="features">
+
+        <i class="fas fa-search" @click="searchBarOpen"></i>
+
+        <div id="searchBar" :class="{'-active': searchBarPage}">
+            <div class="searchBarTop">
+
+                <div class="searchTitle">
+                    <i class="fas fa-search"></i>
+                    <p> Search </p>
+                </div>
+
+                <input type="text" name="searchArea" id="searchBarInput">
+                <img class="searchBarArrow" src="./assets/img/Icon_arrowRight.png">
+
+            </div>
+
+            <div class="notSearch">
+                <img src="./assets/img/searchBarImg.png">
+                <h4 class="no_search">
+                    Type something to search...
+                </h4>
+                <h4 class="no_fouund none">
+                    No results found for query "..."
+                </h4>
+            </div>
+
+            <ul class="searchBar_Found">
+                <!-- <li class="searchBar_item"> <div class="personalRoom"></div> <a href="#">Andy's personal exhibits </a> </li>
+                <li class="searchBar_item"> <a href="#">Andy's works </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li> -->
+            </ul>
+        </div>
+
+        <div class="personal">
+            <a href="./exhibition.html">個人展間</a>
+        </div>
+
+        <div class="logInOption">
+            <div class="login">
+                <a href="###" class="login_manger">登入</a>
+                <ul>
+                    <li>
+                        <a href="###" class="manger close">管理</a>
+                        <ul>
+                            <li><a href="###" class="logOut close">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="fas fa-user-friends"></i>
+            </div>
+        </div>
+
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
+
+
+<div class="panel panel--static close" id="app2">
+    <div class="panel__content left">
+        <h1 class="panel__heading">Don't have an account?</h1>
+        <p class="panel__copy">免費創辦帳號, 立即成為勃塢會員, 即可上傳自己創作之展覽品, 與各全國藝術家交流, 或是參觀展品<br><br>升級會員可享更多福利 !</p>
+        <button type="button" class="btn btn--secondary signup">Sign up</button>
+    </div>
+    <div class="panel__content right">
+        <h1 class="panel__heading">Have an account?</h1>
+        <p class="panel__copy">已經有帳號了嗎?<br><br> 歡迎點此直接登入, 進入自己的會員展間, 管理館藏及訂閱高級會員</p>
+        <button type="button" class="btn btn--secondary login">Log in</button>
+    </div>
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+            <h1 class="panel__heading">Sign up</h1>
+            <form id="signup" method="POST" action="./assets/php/front/JoinR.php">
+
+                <div><input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                        :class="{ 'is-invalid': usernameError }" v-model="name" />
+                    <p>{{userErrMsg}}</p>
+                </div>
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <br />
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+                <br />
+                <button class="btn btn--primary" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <!-- <div class="fb-login-button" onclick="facebookLogIn()" data-width="120px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel__content login">
+            <h1 class="panel__heading">Log in</h1>
+            <form id="login" method="POST" action="./assets/php/front/LoginR.php">
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <button class="btn btn--primary" @click='checkLog($event)'>Log in</button>
+                <a href="###">Forgot password?</a>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="paenl form-wrap close" id="app3">
+    <div class="tabs">
+        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+        <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+    </div>
+    <!--.tabs-->
+
+    <div class="tabs-content">
+        <div id="signup-tab-content" class="active">
+            <form class="signup-form" action="./assets/php/front/JoinR.php" method="post">
+                <input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                    :class="{ 'is-invalid': usernameError }" v-model="name" />
+                <p>{{userErrMsg}}</p>
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.signup-tab-content-->
+
+        <div id="login-tab-content" class="close">
+            <form class="login-form" action="./assets/php/front/LoginR.php" method="post">
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1 btn--primary" @click='checkLog($event)'>Log in</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <p><a href="#">Forget your password?</a></p>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.login-tab-content-->
+    </div>
+    <!--.tabs-content-->
+</div>
+
+<div class="loginClose" style="position: fixed;top: 0;left: 0;
+width: 100vw;height: 100vh; opacity: 0.5;background-color: black; display: none;z-index: 50;"></div>
+
+
+  <div class="musicControlBtn" id="app">
+  <div class="musicControlBtnSpan" @click="open">
+    <span class="bar line1 hide"></span>
+    <span class="bar line2 hide"></span>
+    <span class="bar line3 hide"></span>
+    <div class="audio">
+      <audio loop="loop" id="music1" src="./assets/music/music1.mp3"></audio>
+    </div>
+  </div>
+  <p>{{Music}}</p>
+</div>
+
+
+  
+
+  <!-- -----header over----- -->
+
+
+  <!-- wrapper -->
+
+  <div class="title">
+    <h1>Ocean</h1>
+  </div>
+
+  <!-- <div class="back">
+    <a href="./homepage.html">
+      <img src="./assets/img/Group 188.png" alt="">
+    </a>
+  </div> -->
+
+
+
+  <div class="container">
+
+
+    <div class="imgAll">
+      <div class="3d"></div>
+      <!-- <img src="./assets/img/ocean/new-glass-concrete-sculptures-ben-young-13.jpg">
+      <img src="./assets/img/ocean/450807ccf774cfa6f18a7fe16219d176.jpg">
+      <img src="./assets/img/ocean/ben-young-contemporary-glass-sculptures-4.jpg">
+      <img src="./assets/img/ocean/new-glass-concrete-sculptures-ben-young-23.jpg">
+      <img src="./assets/img/ocean/a6dd8562c17518aeeb5ea81902bb1762.jpg">
+      <img src="./assets/img//ocean/new-glass-concrete-sculptures-ben-young-15.jpg">
+      <img src="./assets/img/ocean/462fd61d28fb4b227b21439ded1100d5.jpg">
+      <img src="./assets/img/ocean/1d0f11a7bdbd518db65be03aaf08f0ba.jpg">
+      <img src="./assets/img/ocean/8d0b80e68e803d920c93b8ba92e442d7.jpg"> -->
+
+    </div>
+
+
+  </div>
+
+
+  <ul class="button">
+    <li>
+      <a href="./universe.html">
+        <span></span>
+        <p>宇宙</p>
+      </a>
+    </li>
+    <li>
+      <a href="##" style="color: #2E2824;">
+        <span></span>
+        <p>海洋</p>
+      </a>
+    </li>
+    <li>
+      <a href="./forest.html">
+        <span></span>
+        <p>森林</p>
+      </a>
+    </li>
+    <li>
+      <a href="./ground.html">
+        <span></span>
+        <p>地底</p>
+      </a>
+    </li>
+
+  </ul>
+
+
+
+  <script src="./assets/js/menu.js"></script>
+  <script src="./assets/js/loginFB.js"></script>
+  <script src="./assets/js/loginGoogle.js"></script>
+  <script src='./assets/js/music.js'></script>
+  <script src='./assets/js/verify.js'></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/search_all.js"></script>
+  <script src='./assets/js/logIn.js'></script>
+  <script src="./assets/js/button.js"></script>
+  <!-- <script src="./assets/js/mouseHover.js"></script> -->
+
+  <script>
+    // $(window).scroll(doQuery);
+    $(document).ready(function () {
+      doQuery()
+    });
+
+    function doQuery() {
+      // axios.get('./test.php').then((res)=>{
+      //   console.log(res.data); 
+      // })
+      // alert();
+      $.ajax({
+        method: "post",
+        url: "./assets/php/front/work_ocean.php",
+        // data: {
+        //     Name: str
+        // },
+        dataType: "text",
+        success: function (response) {
+          //更新html內容
+
+          document.getElementsByClassName('imgAll')[0].insertAdjacentHTML('beforeend', response);
+        },
+        error: function (exception) {
+          alert("發生錯誤: " + exception.status);
+        }
+      });
+    };
+
+  </script>
+
+  <script>
+    $('.imgAll').on('click', '.collection_img', function () {
+      let work_id = $(this).attr('data-id');
+      // console.log(work_id);
+      url = "moon.html?work_id=" + work_id;
+      window.location.href = url;
+    });
+
+  </script>
+  <script type="module">
+    import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.module.min.js';
+
+    // import Stats from 'https://threejs.org/examples/jsm/libs/stats.module.js';
+
+    import {
+      OrbitControls
+    } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+    import {
+      FBXLoader
+    } from 'https://threejs.org/examples/jsm/loaders/FBXLoader.js';
+
+    let camera, scene, renderer, stats, controls;
+    // let camera2, scene2, renderer2, stats2;
+
+
+    const clock = new THREE.Clock();
+
+    let mixer;
+
+
+    init();
+    // init_2();
+    animate();
+
+    function init() {
+
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+
+      camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 10000);
+      // camera.position.set(3, 0.5, -2);
+      camera.position.set(1000, 2500, 5000);
+
+      // camera.lookAt(1, 1, 1);
+      camera.lookAt(1, 1, 1,);
+
+
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color('#FFFFFF');
+      // scene.fog = new THREE.Fog('#FFFFFF', 200, 1000);
+
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
+      hemiLight.position.set(0, 2000, 0);
+      scene.add(hemiLight);
+
+      const dirLight = new THREE.DirectionalLight(0xffffff);
+      dirLight.position.set(20, 20, 10);
+      dirLight.castShadow = true;
+      dirLight.shadow.camera.top = 180;
+      dirLight.shadow.camera.bottom = -100;
+      dirLight.shadow.camera.left = -120;
+      dirLight.shadow.camera.right = 120;
+      scene.add(dirLight);
+
+      // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
+
+      // ground
+      // const mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(2000, 2000), new THREE.MeshPhongMaterial({
+      //   // color: 0x2E2824,
+      //   // color: '#2e2725',
+      //   depthWrite: false
+      // }));
+      // mesh.rotation.x = -Math.PI / 5;
+      // mesh.receiveShadow = true;
+      // scene.add(mesh);
+
+      // const grid = new THREE.GridHelper(200, 20, 0x000000, 0x000000);
+      // grid.material.opacity = 0.2;
+      // grid.material.transparent = true;
+      // scene.add(grid);
+
+
+
+      // model
+      var threed = document.getElementsByClassName('3d')[0];
+      console.log(threed);
+      const loader = new FBXLoader();
+      loader.load('../3d/3d-model.fbx', function (object) {
+        // window.addEventListener('resize', function () {
+        // 	player.setSize(window.innerWidth, window.innerHeight);
+        // });
+
+        // var player = new APP.Player();
+        // player.load(JSON.parse(object));
+        // player.setSize(window.innerWidth, window.innerWidth);
+        // player.play();
+
+        // document.getElementsByClassName("3d")[0].appendChild(player.dom);
+        // mixer = new THREE.AnimationMixer(object);
+
+        // const action = mixer.clipAction(object.animations[0]);
+        // let action = mixer.clipAction((obj as any).animations[0]);
+        // action.play();
+
+        // object.traverse(function(child) {
+
+        //     if (child.isMesh) {
+
+        //         child.castShadow = true;
+        //         child.receiveShadow = true;
+
+        //     }
+
+        // });
+
+
+        scene.add(object);
+
+      });
+
+
+      renderer = new THREE.WebGLRenderer({
+        antialias: true
+      });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.shadowMap.enabled = true;
+      container.appendChild(renderer.domElement);
+
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.target.set(0, 0, 0);
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 10;
+      // controls.update();
+
+      window.addEventListener('resize', onWindowResize, false);
+
+      // stats
+      // current.stats = new Stats();
+      // container.appendChild(current.stats.dom);
+
+      var canvas = document.getElementsByTagName('canvas')[0];
+      threed.appendChild(canvas);
+
+    }
+
+
+
+
+
+
+
+    function onWindowResize() {
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    //
+
+    function animate() {
+
+      requestAnimationFrame(animate);
+
+      // const delta = clock.getDelta();
+
+      // if (mixer) mixer.update(delta);
+      controls.update();
+
+      renderer.render(scene, camera);
+      // current.renderer.render(current.scene, camera);
+
+      // current.stats.update();
+
+    }
+  </script>
+</body>
+
+</html>

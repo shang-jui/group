@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/back/back.css">
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+</head>
+
+<body onload="doQuery()">
+    <header>
+        <img src="./assets/img/back/logo_bowu_white.png" alt="">
+        <h2>BOWU BACKEND MANGEMENT SYSTEM</h2>
+        <a href="" class="logout">登出</a>
+    </header>
+    <div class="exhibition_memberlist">
+        <div class="main">
+            <div class="btn">
+                <ul>
+                    <li>
+
+                    </li>
+                    <li>
+                        <a href="./back_memberlist.html">會員管理</a>
+                    </li>
+                    <li>
+                        <a href="./back_work.html">展品管理</a>
+                    </li>
+                    <li>
+                        <a href="./back_exhibition.html" class="click">展間管理</a>
+                    </li>
+                    <li>
+                        <a href="./back_collection_universe.html">館藏管理</a>
+                        <ol>
+                            <li><a href="./back_collection_universe.html">宇宙館藏</a></li>
+                            <li><a href="./back_collection_ocean.html">海洋館藏</a></li>
+                            <li><a href="./back_collection_forest.html">森林館藏</a></li>
+                            <li><a href="./back_collection_underground.html">地底館藏</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="./back_postcard.html">明信片管理</a>
+                    </li>
+                    <li>
+                        <a href="./back_bidding.html">競標管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="member_list">
+                <h2>展間管理</h2>
+                <div class="line"></div>
+                <select name="" class="select">
+                    <option value="id">編號</option>
+                    <option value="name">姓名</option>
+                </select>
+                <input type="text" class="search_text">
+                <input type="submit" class="search_btn" value="search">
+                <div class="member_content">
+                    <table class="table table-striped">
+                        <!-- <tr class="table-dark">
+                            <th>展間編號</th>
+                            <th>會員編號</th>
+                            <th>姓名</th>
+                            <th>黑名單</th>
+                            <th>作品數</th>
+                        </tr>
+                        <tr class="table-light">
+                            <td>001</td>
+                            <td>001</td>
+                            <td>陳松輝</td>
+                            <td>白名單</td>
+                            <td>3</td>
+                        </tr> -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //完整列表
+        function doQuery(str) {
+            //Typing your code...
+            $.ajax({
+                method: "POST",
+                url: "./assets/php/back/exhibition_list.php",
+                data: {
+                    Name: str
+                },
+                dataType: "text",
+                success: function (response) {
+                    //更新html內容
+                    // document.getElementsByClassName('table')[0].insertAdjacentHTML("beforeend", response);
+                    document.getElementsByClassName('table')[0].innerHTML = response;
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        };
+
+        //搜尋姓名、編號
+        $('.search_btn').click(search);
+        function search(str) {
+            $.ajax({
+                method: "POST",
+                url: "./assets/php/back/exhibition_search.php",
+                data: {
+                    'textbox': $('.search_text').val(),
+                    'select': $('.select').val(),
+                },
+                dataType: "text",
+                success: function (response) {
+                    //更新html內容
+                    document.getElementsByClassName('table')[0].innerHTML = response;
+                    // document.getElementsByClassName('table')[0].insertAdjacentHTML("beforeend", response);
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

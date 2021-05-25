@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/css/pages/signin.css">
+    <link rel="stylesheet" href="./assets/css/pages/style_aboutus.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Montserrat:wght@300&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <script src="./assets/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <meta name="google-signin-client_id"
+        content="5123688312-hh38n162r8fqfrd31n2a2hid0q7pk7uf.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+
+    <!-- CURSOR STYLE -->
+<div class="cursor"></div>
+<div class="cursor-outside"></div>
+
+<!-- LINK STYLE -->
+<a href="#" class="mousehover"></a>
+    <header class="indexSideBarGold">
+    <a class="logoForIndex mousehover" href="../dist/homepage.html">
+        <img src="./assets/img/logo_bowu_gold.png">
+    </a>
+
+    <menu class="menuGold mousehover">
+        <p>MENU</p>
+        <div class="menuOpenCloseAni">
+            <span class="indexMenuline1"></span>
+            <span class="indexMenuline2"></span>
+        </div>
+    </menu>
+
+    <div class="smallSize_menuOpenCloseAni">
+        <span class="smallSize_indexMenuline1"></span>
+        <span class="smallSize_indexMenuline2"></span>
+    </div>
+    
+    <!-- 選單頁面 -->
+    <div class="menu_bar none">
+        
+        <div class="menuGsapLine"></div>
+        <div class="smallSizeCloseBtn">
+            <div></div>
+        </div>
+
+        <div class="exhibits-title-outer mousehover">
+            <div class="exhibits-titleHover"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a></div>
+            <div class="exhibits-title"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a></div>
+        </div>
+
+        <div class="menu_about menu_child">
+            <a class="mousehover" href="../dist/About.html">
+                <img src="./assets/img/menu_about.png">
+                About
+            </a>
+        </div>
+
+        <div class="menu_exhibits menu_child">
+            <a class="mousehover" href="../dist/exhibition.html">
+                <img src="./assets/img/menu_exhibits.png" alt="">Exhibits</a>
+        </div>
+
+        <div class="menu_postcard menu_child">
+            <a class="mousehover" href="../dist/postcard.html">
+                <img src="./assets/img/menu_postcard.png" alt="">PostCard</a>
+        </div>
+
+        <div class="notthings menu_child">
+            <a href=""></a>
+        </div>
+
+        <div class="join mousehover">
+            <div class="line"></div>
+            <div class="join-title-outer">
+                <div class="join-title"><a href="##">JOIN US NOW</a></div>
+                <div class="join-titleHover"><a href="##">JOIN US NOW</a></div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li> <a href="#" class="mousehover">SHARE</a> </li>
+        <b></b>
+        <li> <a href="./About.html" class="mousehover">CONTACT US</a> </li>
+    </ul>
+</header>
+
+<div class="sharingBoxAll" style="display: none;">
+    <div class="sharingBoxBg"></div>
+    <div class="sharingBox">
+        <p>
+            SHARING BOWU-MUSEUM<br> WITH YOUR FRIEND!
+        </p>
+        <div class="sharingBtn">
+            <ul class="share-buttons" data-source="simplesharingbuttons.com">
+                <li><a class="mousehover" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.2.0.172%2Fdist%2F&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+                <li><a class="mousehover" href="https://twitter.com/intent/tweet?source=http%3A%2F%2F10.2.0.172%2Fdist%2F&text=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+                <li><a class="mousehover" href="https://plus.google.com/share?url=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+                <li><a class="mousehover" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.2.0.172%2Fdist%2F&title=&summary=&source=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a></li>
+                <li><a class="mousehover" href="mailto:?subject=&body=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- <div class="features">
+    <i class="fas fa-search"></i>
+    <div class="personal"><a href="./exhibition.html">個人展間</a>
+    </div>
+
+
+    <div class="login"><a href="###" class="login_manger">管理</a>
+        <i class="fas fa-user-friends"></i>
+    </div>
+
+    <i class="fas fa-bell"></i>
+</div> -->
+
+<div id="searchBarALL">
+    <div class="searchBarBlack" @click="searchBarClose" :class="{'-active': searchBarBg}"></div>
+    <div class="features">
+
+        <i class="fas fa-search" @click="searchBarOpen"></i>
+
+        <div id="searchBar" :class="{'-active': searchBarPage}">
+            <div class="searchBarTop">
+
+                <div class="searchTitle">
+                    <i class="fas fa-search"></i>
+                    <p> Search </p>
+                </div>
+
+                <input type="text" name="searchArea" id="searchBarInput">
+                <img class="searchBarArrow" src="./assets/img/Icon_arrowRight.png">
+
+            </div>
+
+            <div class="notSearch">
+                <img src="./assets/img/searchBarImg.png">
+                <h4 class="no_search">
+                    Type something to search...
+                </h4>
+                <h4 class="no_fouund none">
+                    No results found for query "..."
+                </h4>
+            </div>
+
+            <ul class="searchBar_Found">
+                <!-- <li class="searchBar_item"> <div class="personalRoom"></div> <a href="#">Andy's personal exhibits </a> </li>
+                <li class="searchBar_item"> <a href="#">Andy's works </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li> -->
+            </ul>
+        </div>
+
+        <div class="personal">
+            <a href="./exhibition.html">個人展間</a>
+        </div>
+
+        <div class="logInOption">
+            <div class="login">
+                <a href="###" class="login_manger">登入</a>
+                <ul>
+                    <li>
+                        <a href="###" class="manger close">管理</a>
+                        <ul>
+                            <li><a href="###" class="logOut close">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="fas fa-user-friends"></i>
+            </div>
+        </div>
+
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
+
+
+<div class="panel panel--static close" id="app2">
+    <div class="panel__content left">
+        <h1 class="panel__heading">Don't have an account?</h1>
+        <p class="panel__copy">免費創辦帳號, 立即成為勃塢會員, 即可上傳自己創作之展覽品, 與各全國藝術家交流, 或是參觀展品<br><br>升級會員可享更多福利 !</p>
+        <button type="button" class="btn btn--secondary signup">Sign up</button>
+    </div>
+    <div class="panel__content right">
+        <h1 class="panel__heading">Have an account?</h1>
+        <p class="panel__copy">已經有帳號了嗎?<br><br> 歡迎點此直接登入, 進入自己的會員展間, 管理館藏及訂閱高級會員</p>
+        <button type="button" class="btn btn--secondary login">Log in</button>
+    </div>
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+            <h1 class="panel__heading">Sign up</h1>
+            <form id="signup" method="POST" action="./assets/php/front/JoinR.php">
+
+                <div><input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                        :class="{ 'is-invalid': usernameError }" v-model="name" />
+                    <p>{{userErrMsg}}</p>
+                </div>
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <br />
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+                <br />
+                <button class="btn btn--primary" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <!-- <div class="fb-login-button" onclick="facebookLogIn()" data-width="120px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel__content login">
+            <h1 class="panel__heading">Log in</h1>
+            <form id="login" method="POST" action="./assets/php/front/LoginR.php">
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <button class="btn btn--primary" @click='checkLog($event)'>Log in</button>
+                <a href="###">Forgot password?</a>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="paenl form-wrap close" id="app3">
+    <div class="tabs">
+        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+        <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+    </div>
+    <!--.tabs-->
+
+    <div class="tabs-content">
+        <div id="signup-tab-content" class="active">
+            <form class="signup-form" action="./assets/php/front/JoinR.php" method="post">
+                <input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                    :class="{ 'is-invalid': usernameError }" v-model="name" />
+                <p>{{userErrMsg}}</p>
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.signup-tab-content-->
+
+        <div id="login-tab-content" class="close">
+            <form class="login-form" action="./assets/php/front/LoginR.php" method="post">
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1 btn--primary" @click='checkLog($event)'>Log in</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <p><a href="#">Forget your password?</a></p>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.login-tab-content-->
+    </div>
+    <!--.tabs-content-->
+</div>
+
+<div class="loginClose" style="position: fixed;top: 0;left: 0;
+width: 100vw;height: 100vh; opacity: 0.5;background-color: black; display: none;z-index: 50;"></div>
+    <div class="musicControlBtn" id="app">
+  <div class="musicControlBtnSpan" @click="open">
+    <span class="bar line1 hide"></span>
+    <span class="bar line2 hide"></span>
+    <span class="bar line3 hide"></span>
+    <div class="audio">
+      <audio loop="loop" id="music1" src="./assets/music/music1.mp3"></audio>
+    </div>
+  </div>
+  <p>{{Music}}</p>
+</div>
+
+
+    <div id="scroll-zone">
+
+        <div class="bock-AboutUs">
+            <div class="aboutus-img" data-scroll data-scroll-speed="2">
+                <p data-scroll data-scroll-speed="4">
+                    　　BO-WU是一間結合四大主題與來自各大藝術展覽者所建造的線上展覽館。<br>取名由四個大寫字母組成，是為了有一種活潑的感覺；而中文則為博物的諧音。<br><br>
+                    　　葧是一種植物，塢是指四周高中間低的地方，如：船塢、山塢。<br>希望帶給使用者一種生氣勃勃，自然舒服、停留、靜止、博覽萬物的氣息。<br><br>
+                    　　希望每個光臨BO-WU Museum 的人都可以找到屬於自己的空間。</p>
+                </p>
+                <span data-scroll data-scroll-speed="1">
+                    <h1>A</h1>
+                    <h2>boutUs</h2>
+                </span>
+            </div>
+        </div>
+        <div class="bock-story">
+            <div class="bc1">
+            </div>
+            <h1 data-scroll data-scroll-speed="4">Story</h1>
+            <P data-scroll data-scroll-speed="3">
+                我們是一群喜歡藝文活動及展覽的工程人。<br>
+                勃塢則是希望能集結對藝術展品喜好的大家而產出的虛擬線上博物館！<br><br>
+                依照四大主題，勃塢提供不同展品給予大家觀賞，也每個會員自己的空間展區給上傳展品、給予大眾觀賞。
+                <br><br>
+                讓交流不分地區，每個藝術品都能找到自己的伯樂。
+            </P>
+            <div class="bc2" data-scroll data-scroll-speed="1">
+                <div class="bc2-gary"></div>
+                <div class="bc2-img"></div>
+            </div>
+            <div class="comma" data-scroll data-scroll-speed="2">
+                <div class="comma1"></div>
+                <div class="comma2"></div>
+            </div>
+            <h2 data-scroll data-scroll-speed="3">　　
+                勃塢 蒐藏並維護具有科學、藝術或歷史重要性的物件，並透過展示（常設展或特展），使公眾得以觀看這些物件。<br><br>
+                　　大多數的大型博物館位於世界各地的重要城市，更具地方性質的博物館位於較小城市、城鎮甚至到鄉村都有典藏、研究、展示、教育四大項。<br></h2>
+        </div>
+        <div class="bock-member">
+            <div class="darkblock">
+                <h1>會員展間</h1>
+                <div class="text" data-scroll data-scroll-speed="1">
+                    <div class="line"></div>
+                    <P> <a class="mousehover" href="/dist/exhibition.html"> VIEW MORE </a></P>
+                </div>
+            </div>
+            <div class="pic">
+
+            </div>
+            <h3 data-scroll data-scroll-speed="1">
+                在這裡<br>
+                　　你將擁有專屬展間<br>
+                展覽自己嘔心瀝血的展品們<br>
+                　　提供大家曝光的機會 讓展品名留青史
+            </h3>
+
+        </div>
+        <div class="bock-JoinUs">
+            <h1>JoinUs</h1>
+            <p>「莫文蔚的陰天，<br>
+                孫燕姿的雨天，周杰倫的晴天， <br>
+                都不如你來和我們和我聊聊天。」</p>
+            <div class="text">
+                <span> 趕快點擊右上方 加入會員</span>
+                <div class="line"></div>
+            </div>
+
+        </div>
+        <div class="bock-postcard" data-scroll data-scroll-speed="2">
+            <div class="pic2" data-scroll data-scroll-speed="1"></div>
+            <div class="gray-block"></div>
+            <h1>客製明信片</h1>
+            <p data-scroll data-scroll-speed="1">不會設計也可輕鬆完成多種背景、元素供您挑選<br>
+                　　玩翻你的想像力！<br><br>
+                完成後可選擇郵寄或實體寄送 <br>
+                　　小小心意、大大滿足，現在就立即動手吧！<br></p>
+            <div class="text" data-scroll data-scroll-speed="2">
+                <div class="line"></div>
+                <span> <a class="mousehover" href="/dist/postcard.html"> VIEW MORE </a></span>
+            </div>
+        </div>
+
+        <footer>
+    <ul>
+        <li><a href="./About.html">AboutUs</a></li>
+        <li><a href="./exhibition.html">Exhibits</a></li>
+        <li><a href="./postcard.html">PostCard</a></li>
+    </ul>
+
+    <div class="footerLogo">
+        <a href="#">
+            <img src="./assets/img/logo_bowu_white.png" width="55px" height="55px">
+            <p>　BO WU MUSEUM</p>
+        </a>
+    </div>
+
+    <ol>
+        <li><a href="#">Rules</a></li>
+        <li><a href="#"><img src="./assets/img/IconFacebook.png"></a></li>
+        <li><a href="#"><img src="./assets/img/IconInstagram.png"></a></li>
+        <li><a href="#"><img src="./assets/img/IconYoutube.png"></a></li>
+    </ol>
+</footer>
+    </div>
+
+    <script src="./assets/js/menuGold.js"></script>
+    <script src="./assets/js/mouseHover.js"></script>
+    <script src="./assets/js/loginFB.js"></script>
+    <script src="./assets/js/loginGoogle.js"></script>
+    <script src='./assets/js/music.js'></script>
+    <script src='./assets/js/verify.js'></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/search_all.js"></script>
+    <script src='./assets/js/logIn.js'></script>
+
+
+    <script>
+        const scroller = new LocomotiveScroll({
+            el: document.querySelector("#scroll-zone"),
+            smooth: true,
+            repeat: true,
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Montserrat:wght@300&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <script src="./assets/js/jquery-3.5.1.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <!-- <link rel="stylesheet" href="../dist/assets/css/all.css"> -->
+    <link rel="stylesheet" href="../dist/assets/css/pages/homepage.css">
+    <link rel="stylesheet" href="../dist/assets/css/pages/signin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <meta name="google-signin-client_id" content="5123688312-hh38n162r8fqfrd31n2a2hid0q7pk7uf.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Homepage_BoWuMuseum</title>
+</head>
+
+<body>
+    <style>
+        .openingAni{
+            z-index: 15;
+            top: 0;
+            left: 0;
+            
+            position: fixed;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+
+            animation: end 1s 3.5s forwards;    
+            pointer-events: none;
+        }
+        @keyframes end{
+            0%{opacity: 1;}
+            100%{opacity: 0;}
+        }
+        .nameAll{
+            color: #fff;
+            font-family: 'Montserrat';
+            letter-spacing: 5px;
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .nameAll img{
+            width: 150px;
+            margin: 0 15px;
+            opacity: 0;
+        }
+        
+        .nameAni-outer1{
+            overflow: hidden;
+            margin-top: 50px;
+            opacity: 0;
+            animation: ccc 1s forwards;
+        }
+        .nameAni1{
+            display: block;
+            width: auto;
+            height: 1em;
+            background-color: #000;
+            animation: aaa 1s forwards;
+            position: relative;
+            top: -1em;
+            left: 0;
+        }
+        @keyframes aaa {
+            0%{transform: translateX(0px)}
+            100%{transform: translateX(3.5em);}
+        }
+        .nameAni-outer2{
+            overflow: hidden;
+            margin-top: 50px;
+            opacity: 0;
+            animation: ccc 1.5s .8s forwards;
+        }
+        .nameAni2{
+            display: block;
+            width: auto;
+            height: 1em;
+            background-color: rgb(0, 0, 0);
+
+            position: relative;
+            top: -1em;
+            left: 0;
+            animation: bbb 1.5s .8s forwards;
+        }
+        @keyframes bbb {
+            0%{transform: translateX(0px);}
+            100%{transform: translateX(5em);}
+        } 
+        .nameAni3{
+            animation: ccc 2s 2s forwards;
+        }
+        @keyframes ccc {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        } 
+        </style>
+
+    <!-- openingAni -->
+    <div class="openingAni">
+        <div class="nameAll">
+            <div class="nameAni-outer1">
+                BoWu<div class="nameAni1"></div>
+            </div>
+            <img class="nameAni3" src="./assets/img/logo_bowu_white.png">
+            <div class="nameAni-outer2">
+                Museum<div class="nameAni2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 跳轉頁面之div -->
+    <div class="going3Dpage"></div>
+
+    <!-- CURSOR STYLE -->
+    <div class="cursor"></div>
+    <div class="cursor-outside"></div>
+
+    <!-- LINK STYLE -->
+    <a href="#" class="mousehover"></a>
+
+    <!-- 左側 header -->
+    <header class="indexSideBar">
+        <a class="logoForIndex mousehover" href="../dist/homepage.html">
+            <img src="./assets/img/logo_bowu_white.png">
+        </a>
+
+        <menu class="menu mousehover">
+            <p>MENU</p>
+            <div class="menuOpenCloseAni">
+                <span class="indexMenuline1"></span>
+                <span class="indexMenuline2"></span>
+            </div>
+        </menu>
+
+        <div class="smallSize_menuOpenCloseAni">
+            <span class="smallSize_indexMenuline1"></span>
+            <span class="smallSize_indexMenuline2"></span>
+        </div>
+        
+        <!-- 選單頁面 -->
+        <div class="menu_bar none">
+            
+            <div class="menuGsapLine"></div>
+            <div class="smallSizeCloseBtn">
+                <div></div>
+            </div>
+
+            <div class="exhibits-title-outer mousehover">
+                <div class="exhibits-titleHover"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a></div>
+                <div class="exhibits-title"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a></div>
+            </div>
+
+            <div class="menu_about menu_child">
+                <a class="mousehover" href="../dist/About.html">
+                    <img src="./assets/img/menu_about.png">
+                    About
+                </a>
+            </div>
+
+            <div class="menu_exhibits menu_child">
+                <a class="mousehover" href="../dist/exhibition.html">
+                    <img src="./assets/img/menu_exhibits.png" alt="">Exhibits</a>
+            </div>
+
+            <div class="menu_postcard menu_child">
+                <a class="mousehover" href="../dist/postcard.html">
+                    <img src="./assets/img/menu_postcard.png" alt="">PostCard</a>
+            </div>
+
+            <div class="notthings menu_child">
+                <a href=""></a>
+            </div>
+
+            <div class="join mousehover">
+                <div class="line"></div>
+                <div class="join-title-outer">
+                    <div class="join-title"><a href="##">JOIN US NOW</a></div>
+                    <div class="join-titleHover"><a href="##">JOIN US NOW</a></div>
+                </div>
+            </div>
+        </div>
+
+        <ul>
+            <li class="sharingBlock"> <a href="#" class="mousehover">SHARE</a> </li>
+            <b></b>
+            <li> <a href="./About.html" class="mousehover">CONTACT US</a> </li>
+        </ul>
+    </header>
+
+    <div class="sharingBoxAll" style="display: none;">
+        <div class="sharingBoxBg"></div>
+        <div class="sharingBox">
+            <p>
+                SHARING BOWU-MUSEUM<br> WITH YOUR FRIEND!
+            </p>
+            <div class="sharingBtn">
+                <ul class="share-buttons" data-source="simplesharingbuttons.com">
+                    <li><a class="mousehover" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.2.0.172%2Fdist%2F&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+                    <li><a class="mousehover" href="https://twitter.com/intent/tweet?source=http%3A%2F%2F10.2.0.172%2Fdist%2F&text=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+                    <li><a class="mousehover" href="https://plus.google.com/share?url=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+                    <li><a class="mousehover" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.2.0.172%2Fdist%2F&title=&summary=&source=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a></li>
+                    <li><a class="mousehover" href="mailto:?subject=&body=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- searchBar -->
+    <!-- <div class="features">
+    <i class="fas fa-search"></i>
+    <div class="personal"><a href="./exhibition.html">個人展間</a>
+    </div>
+
+
+    <div class="login"><a href="###" class="login_manger">管理</a>
+        <i class="fas fa-user-friends"></i>
+    </div>
+
+    <i class="fas fa-bell"></i>
+</div> -->
+
+<div id="searchBarALL">
+    <div class="searchBarBlack" @click="searchBarClose" :class="{'-active': searchBarBg}"></div>
+    <div class="features">
+
+        <i class="fas fa-search" @click="searchBarOpen"></i>
+
+        <div id="searchBar" :class="{'-active': searchBarPage}">
+            <div class="searchBarTop">
+
+                <div class="searchTitle">
+                    <i class="fas fa-search"></i>
+                    <p> Search </p>
+                </div>
+
+                <input type="text" name="searchArea" id="searchBarInput">
+                <img class="searchBarArrow" src="./assets/img/Icon_arrowRight.png">
+
+            </div>
+
+            <div class="notSearch">
+                <img src="./assets/img/searchBarImg.png">
+                <h4 class="no_search">
+                    Type something to search...
+                </h4>
+                <h4 class="no_fouund none">
+                    No results found for query "..."
+                </h4>
+            </div>
+
+            <ul class="searchBar_Found">
+                <!-- <li class="searchBar_item"> <div class="personalRoom"></div> <a href="#">Andy's personal exhibits </a> </li>
+                <li class="searchBar_item"> <a href="#">Andy's works </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li> -->
+            </ul>
+        </div>
+
+        <div class="personal">
+            <a href="./exhibition.html">個人展間</a>
+        </div>
+
+        <div class="logInOption">
+            <div class="login">
+                <a href="###" class="login_manger">登入</a>
+                <ul>
+                    <li>
+                        <a href="###" class="manger close">管理</a>
+                        <ul>
+                            <li><a href="###" class="logOut close">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="fas fa-user-friends"></i>
+            </div>
+        </div>
+
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
+
+
+<div class="panel panel--static close" id="app2">
+    <div class="panel__content left">
+        <h1 class="panel__heading">Don't have an account?</h1>
+        <p class="panel__copy">免費創辦帳號, 立即成為勃塢會員, 即可上傳自己創作之展覽品, 與各全國藝術家交流, 或是參觀展品<br><br>升級會員可享更多福利 !</p>
+        <button type="button" class="btn btn--secondary signup">Sign up</button>
+    </div>
+    <div class="panel__content right">
+        <h1 class="panel__heading">Have an account?</h1>
+        <p class="panel__copy">已經有帳號了嗎?<br><br> 歡迎點此直接登入, 進入自己的會員展間, 管理館藏及訂閱高級會員</p>
+        <button type="button" class="btn btn--secondary login">Log in</button>
+    </div>
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+            <h1 class="panel__heading">Sign up</h1>
+            <form id="signup" method="POST" action="./assets/php/front/JoinR.php">
+
+                <div><input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                        :class="{ 'is-invalid': usernameError }" v-model="name" />
+                    <p>{{userErrMsg}}</p>
+                </div>
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <br />
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+                <br />
+                <button class="btn btn--primary" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <!-- <div class="fb-login-button" onclick="facebookLogIn()" data-width="120px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel__content login">
+            <h1 class="panel__heading">Log in</h1>
+            <form id="login" method="POST" action="./assets/php/front/LoginR.php">
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <button class="btn btn--primary" @click='checkLog($event)'>Log in</button>
+                <a href="###">Forgot password?</a>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="paenl form-wrap close" id="app3">
+    <div class="tabs">
+        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+        <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+    </div>
+    <!--.tabs-->
+
+    <div class="tabs-content">
+        <div id="signup-tab-content" class="active">
+            <form class="signup-form" action="./assets/php/front/JoinR.php" method="post">
+                <input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                    :class="{ 'is-invalid': usernameError }" v-model="name" />
+                <p>{{userErrMsg}}</p>
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.signup-tab-content-->
+
+        <div id="login-tab-content" class="close">
+            <form class="login-form" action="./assets/php/front/LoginR.php" method="post">
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1 btn--primary" @click='checkLog($event)'>Log in</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <p><a href="#">Forget your password?</a></p>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.login-tab-content-->
+    </div>
+    <!--.tabs-content-->
+</div>
+
+<div class="loginClose" style="position: fixed;top: 0;left: 0;
+width: 100vw;height: 100vh; opacity: 0.5;background-color: black; display: none;z-index: 50;"></div>
+
+
+    <!-- 顯示頁面 -->
+    <div class="pageBar">
+    
+        <div class="indexNum-text">
+            <span class="indexNum">01</span>
+            <span class="indexNumAni">01</span>
+        </div>
+
+        <div class="pageBarLine">
+            <div class="pageBarLineNow"></div>
+        </div>
+        <p>04</p>
+    </div>
+
+    <!-- 音樂按鈕 -->
+    <div class="musicControlBtn" id="app">
+  <div class="musicControlBtnSpan" @click="open">
+    <span class="bar line1 hide"></span>
+    <span class="bar line2 hide"></span>
+    <span class="bar line3 hide"></span>
+    <div class="audio">
+      <audio loop="loop" id="music1" src="./assets/music/music1.mp3"></audio>
+    </div>
+  </div>
+  <p>{{Music}}</p>
+</div>
+
+    <!-- 捲動看更多 -->
+    <div class="scrollToSeeMore">
+        <div class="title-outer">
+            <div class="title">SCROLL TO EXPLORE</div>
+            <div class="titleHover">SCROLL TO EXPLORE</div>
+        </div>
+        <div class="SeeMoreBar rollingBar1"></div>
+    </div>
+    
+    <!-- 四大主題分頁 -->
+    <div class="swiper-container swiper-container-v">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="uniWrapper big-wrapper">
+                    <main class="mainAreaUni">
+                        <h1 class="animation-outer">
+                            <div class="animation-outer__inner">Universe</div>
+                            <div class="animation-outer__inner -fake">Universe</div>
+                        </h1>
+                        <h2 class="animation-outer">
+                            <div class="animation-outer__inner">四大展間　———　宇宙。</div>
+                            <div class="animation-outer__inner -fake">四大展間　———　宇宙。</div>
+                        </h2>
+                        <p class="animation-p">　　展示探索宇宙由近至遠的概念，從我們身處的太陽系開始，再推展至恆星，銀河系及更遙遠的星系，以至探索宇宙的演化及相關的科學。</p>
+
+                        <div class="exBtn">
+                            <a href="./universe.html">
+                                <h3 class="textAni _EN">ENTER HERE</h3>
+                                <div class="exBtn__inner exBtnUni"></div>
+                            </a>
+                        </div>
+
+                    </main>
+                </div>
+                <div class="bgcolorFor4Topic"></div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="oceWrapper big-wrapper">
+                    <main class="mainAreaOce">
+                        <h1 class="animation-outer">
+                            <div class="animation-outer__inner">Ocean</div>
+                            <div class="animation-outer__inner -fake">Ocean</div>
+                        </h1>
+                        <h2 class="animation-outer">
+                            <div class="animation-outer__inner">四大展間　———　海洋。</div>
+                            <div class="animation-outer__inner -fake">四大展間　———　海洋。</div>
+                        </h2>
+                        <p class="animation-p">　　以水的循環為故事主軸，藉由一滴小水滴的旅行，呈現台灣從冷冽的高山溪流到一望無際的海濱外洋等等，多樣的水域生態環境。 並逐一介紹棲息於其中的各式物種。</p>
+
+                        <div class="exBtn">
+                            <a href="./ocean.html">
+                                <h3 class="textAni _EN">ENTER HERE</h3>
+                                <div class="exBtn__inner exBtnOce"></div>
+                            </a>
+                        </div>
+
+                    </main>
+                </div>
+                <div class="bgcolorFor4Topic"></div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="forWrapper big-wrapper">
+                    <main class="mainAreaFor">
+                        <h1  class="animation-outer">
+                            <div class="animation-outer__inner">Forest</div>
+                            <div class="animation-outer__inner -fake">Forest</div>
+                        </h1> 
+                        <h2 class="animation-outer">
+                            <div class="animation-outer__inner">四大展間　———　森林。</div>
+                            <div class="animation-outer__inner -fake">四大展間　———　森林。</div>
+                        </h2>
+                        <p class="animation-p">　　臺灣蓊蓊鬱鬱，群峰綿亙，自古即有「福爾摩沙」美譽。富饒的森林資源素為臺灣珍貴寶藏，孕育豐富又多采多姿的動、植物生態。</p>
+
+                        <div class="exBtn">
+                            <a href="./forest.html">
+                                <h3 class="textAni _EN">ENTER HERE</h3>
+                                <div class="exBtn__inner exBtnFor"></div>
+                            </a>
+                        </div>
+
+                    </main>
+                </div>
+                <div class="bgcolorFor4Topic"></div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="groWrapper big-wrapper">
+                    <main class="mainAreaGro">
+                        <h1  class="animation-outer">
+                            <div class="animation-outer__inner">Ground</div>
+                            <div class="animation-outer__inner -fake">Ground</div>
+                        </h1>
+                        <h2 class="animation-outer">
+                            <div class="animation-outer__inner">四大展間　———　地底。</div>
+                            <div class="animation-outer__inner -fake">四大展間　———　地底。</div>
+                        </h2>
+                        <p class="animation-p">　　化石和礦物是地球上最珍貴的寶藏及資源，也是發掘地球歷史真相的證物。想窺探世界發展的足跡？地底展間絕對是你的第一選擇</p>
+
+                        <div class="exBtn">
+                            <a href="./ground.html">
+                                <h3 class="textAni _EN">ENTER HERE</h3>
+                                <div class="exBtn__inner exBtnGro"></div>
+                            </a>
+                        </div>
+                    </main>
+                </div>
+                <div class="bgcolorFor4Topic"></div>
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <!-- <div class="swiper-slide">
+                <div class="lastWrapper big-wrapper">
+                    <main class="mainAreaLast">
+                        <h1  class="animation-outer">
+                            <div class="animation-outer__inner">BOWU MUSEUM</div>
+                            <div class="animation-outer__inner -fake">BOWU MUSEUM</div>
+                        </h1> 
+
+                        <div class="lastPic"></div>
+
+                        <p class="animation-p">　　BO-WU是一間結合四大主題與來自各大藝術展覽者所建造的線上展覽館。取名由四個大寫字母組成，是為了有一種活潑的感覺；而中文則為博物的諧音。<br>
+                        　　葧是一種植物，塢是指四周高中間低的地方，如：船塢、山塢。希望帶給使用者一種生氣勃勃，自然舒服、停留、靜止、博覽萬物的氣息。<br><br>
+                        　　希望每個光臨BO-WU Museum 的人都可以找到屬於自己的空間。</p>
+                    </main>
+                </div>
+                <div class="bgcolorFor4Topic"></div>
+            </div> -->
+
+        </div>
+    </div>
+    <script>
+        console.log('1')
+        let sharingBlock = document.getElementsByClassName('sharingBlock')[0];
+        let sharingBoxAll = document.getElementsByClassName('sharingBoxAll')[0];
+        let sharingBoxBg = document.getElementsByClassName('sharingBoxBg')[0];
+        let sharingStatus = true;
+        sharingBlock.addEventListener('click',function(){
+            console.log('hi')
+            if(sharingStatus){
+                sharingBoxAll.style.display="block";
+                sharingStatus = false;
+            }else{
+                sharingBoxAll.style.display="none";
+                sharingStatus = true;
+            }
+        })
+        sharingBoxBg.addEventListener('click',function(){
+            if(!sharingStatus){
+                sharingBoxAll.style.display="none";
+                sharingStatus = true;
+            }
+        })
+        
+
+    </script>
+    <script>
+        // $.ajax({
+        //     method: "POST",
+        //     url: "php/front/homepage.php",
+        //     data: {
+
+        //     },
+        //     dataType: "text",
+        //     success: function (response) {
+        //         //更新html內容
+        //         console.log(response)
+        //     },
+        //     error: function (exception) {
+        //         // alert("發生錯誤: " + exception.status);
+        //     }
+        // });
+    </script>
+
+    <!-- 滑鼠設定 -->
+    <script>
+        var circle = document.getElementsByClassName('cursor')[0];
+        var circleOut = document.getElementsByClassName('cursor-outside')[0];
+        // console.log(circle);
+            
+            function moveCircle(e) { 
+                TweenMax.to(circle, 1, {
+                    css: { 
+                        left: e.pageX,
+                        top: e.pageY 
+                    },
+                    ease: Elastic.easeOut
+                });
+                TweenMax.to(circleOut, 1, {
+                    css: { 
+                        left: e.pageX,
+                        top: e.pageY 
+                    },
+                    delay:.05,
+                    ease: Elastic.easeOut
+                });
+            };
+            
+            $(window).on('mousemove', moveCircle);
+            
+            $('.mousehover').mouseenter(function(e) {
+                TweenMax.to(circle, 0.2, {
+                    scale: 5,
+                    backgroundColor: '#e5e5e5a2'
+                });
+            });
+            
+            $('.mousehover').mouseleave(function(e) {
+                TweenMax.to(circle, 0.2, {
+                    scale: 1,
+                    backgroundColor: 'rgb(175, 175, 175)'
+                });
+            });
+            
+    </script>
+
+    <!-- Swiper -->
+    <script>
+        setTimeout(()=>{
+            var swiperV = new Swiper(".swiper-container-v", {
+            direction: "vertical",
+            effect: 'fade',
+            mousewheel: true,
+            speed: 1500,
+            slidesPerView: 1,
+            on:{
+                slideChange(){
+                    let index = this.realIndex;
+
+                    if(this.realIndex === 4){
+                        document.querySelector('.going3Dpage').classList.add('-active')
+                        setTimeout(function(){
+                            window.location.href='./3d.html'
+                        }, 1500);
+                        return false
+                    }
+
+                    let indexNum = document.getElementsByClassName('indexNum')[0];
+                    indexNum.innerText = '0'+ (index+1);
+
+                    let progress = document.getElementsByClassName('pageBarLineNow')[0];
+                    // console.log(progress);
+                    let w = document.body.clientWidth
+                    if (w > 768){
+                        let size = 45 * (index+1);
+                        // progress.style.height = `${size}px`;
+                        $(".pageBarLineNow").animate({height:`${size}px`});
+                        
+                    }else{
+                        if(w > 414){
+                            let padSize = 25 * (index+1);
+                            progress.style.height = `2px`;
+                            // progress.style.width = `${padSize}px`;
+                            $(".pageBarLineNow").animate({width:`${padSize}px`});
+                        }else{
+                            let MobileSize = 13.75 * (index+1);
+                            progress.style.height = `2px`;
+                            // progress.style.width = `${MobileSize}px`;
+                            $(".pageBarLineNow").animate({width:`${MobileSize}px`});
+                        };
+                    };
+                },
+            },
+            pagination: {
+            el: ".swiper-pagination-v",
+            },
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
+            },
+        });
+        },3500)
+
+    </script>
+
+
+    <!-- menu -->
+    <script>
+        let menu_bar = document.getElementsByClassName('menu_bar')[0];
+        let menu = document.getElementsByClassName('menu')[0];
+        let smallSizeMenu = document.getElementsByClassName('smallSize_menuOpenCloseAni')[0];
+        let smallSizeCloseBtn = document.getElementsByClassName('smallSizeCloseBtn')[0];
+
+        menu.addEventListener('click', function () {            
+            let not_none = menu_bar.classList.contains("none");
+
+            if (not_none) {
+                
+                menu_bar.classList.remove("none");
+
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'hidden';
+
+                gsap.to(".indexMenuline1", {
+                    duration: .5, 
+                    y: '1vh',
+                    rotation:45, 
+                    ease: "ease", 
+                    transformOrigin:"50% 50%"}
+                );
+                gsap.to(".indexMenuline2", {
+                    duration: .5, 
+                    width: '4vw', 
+                    rotation:-45, 
+                    ease: "ease", 
+                    transformOrigin:"50% 50%"},
+                );
+                gsap.to(".menu p", {
+                    opacity:0},
+                );
+                gsap.to(".menu_bar", {
+                    opacity:0},
+                );
+                gsap.to(".menu_bar", {
+                    left : 0,
+                    duration: 1,
+                    opacity:1,
+                    ease: "ease",}
+                );
+                gsap.to(".menuGsapLine", {
+                    right: 0,
+                    duration: 1,
+                    ease: "ease"}
+                );
+                gsap.to(".menu_child a",{
+                    opacity:1,
+                    stagger: 0.3,
+                    ease: "ease",
+                    delay : .5}
+                );
+                gsap.to(".menu_personal_exhibits",{
+                    opacity:1,
+                    ease: "ease",
+                    delay : 1.2}
+                );
+                gsap.to(".join",{
+                    opacity:1,
+                    ease: "ease",
+                    delay : 1.5}
+                );
+            } else {
+                menu_bar.classList.add("none");
+
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'visible';
+
+                gsap.to(".indexMenuline1", {
+                    duration: .5, 
+                    y: '0vh',
+                    rotation: 0, 
+                    ease: "ease", 
+                    }
+                );
+                gsap.to(".indexMenuline2", {
+                    duration: .5, 
+                    rotation: 0, 
+                    width: '2vw', 
+                    ease: "ease", 
+                    },
+                );
+                gsap.to(".menu p", {
+                    opacity:1 },
+                );
+                gsap.to(".menu_personal_exhibits",{
+                    opacity:0,
+                    ease: "ease",}
+                );
+                gsap.to(".join",{
+                    opacity:0,
+                    ease: "ease",}
+                );
+                gsap.to(".menuGsapLine", {
+                    right: '-200vw',
+                    duration: 1,
+                    ease: "ease"}
+                );
+                gsap.to(".menu_child a",{
+                    opacity:0,
+                    stagger: 0.3,
+                    ease: "ease",
+                    delay : .5}
+                );
+                gsap.to(".menu_bar", {
+                    opacity:0,
+                    ease: "ease",}
+                );
+            };
+
+        });
+
+        smallSizeMenu.addEventListener('click', function () {            
+            let not_none = menu_bar.classList.contains("none");
+
+            if (not_none) {
+                
+                menu_bar.classList.remove("none");
+
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'hidden';
+
+                gsap.to(".menu p", {
+                    opacity:0},
+                );
+                gsap.to(".menu_bar", {
+                    opacity:0},
+                );
+                gsap.to(".menu_bar", {
+                    left : 0,
+                    duration: 1,
+                    opacity:1,
+                    ease: "ease",}
+                );
+                gsap.to(".menuGsapLine", {
+                    right: 0,
+                    duration: 1,
+                    ease: "ease"}
+                );
+                gsap.to(".menu_child a",{
+                    opacity:1,
+                    stagger: 0.3,
+                    ease: "ease",
+                    delay : .5}
+                );
+                gsap.to(".menu_personal_exhibits",{
+                    opacity:1,
+                    ease: "ease",
+                    delay : 1.2}
+                );
+                gsap.to(".join",{
+                    opacity:1,
+                    ease: "ease",
+                    delay : 1.5}
+                );
+                gsap.to(".smallSizeCloseBtn",{
+                    opacity:1,
+                    ease: "ease",
+                    delay : 1.7}
+                );
+            } else {
+                menu_bar.classList.add("none");
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'visible';
+            };
+        });
+
+        smallSizeCloseBtn.addEventListener('click', function () {            
+            let not_none = menu_bar.classList.contains("none");
+
+            if (not_none) {
+                menu_bar.classList.remove("none");
+
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'hidden';
+
+            } else {
+                menu_bar.classList.add("none");
+
+                let featureDisappear = document.getElementsByClassName('features')[0];
+                featureDisappear.style.visibility= 'visible';
+
+                gsap.to(".menu p", {
+                    opacity:1 },
+                );
+                gsap.to(".menu_personal_exhibits",{
+                    opacity:0,
+                    ease: "ease",}
+                );
+                gsap.to(".join",{
+                    opacity:0,
+                    ease: "ease",}
+                );
+                gsap.to(".menuGsapLine", {
+                    right: '-200vw',
+                    duration: 1,
+                    ease: "ease"}
+                );
+                gsap.to(".menu_child a",{
+                    opacity:0,
+                    stagger: 0.3,
+                    ease: "ease",
+                    delay : .5}
+                );
+                gsap.to(".menu_bar", {
+                    opacity:0,
+                    ease: "ease",}
+                );
+                gsap.to(".smallSizeCloseBtn", {
+                    opacity:0,
+                    ease: "ease",}
+                );
+
+            };
+
+        });
+
+    </script>
+
+    <!-- 音樂 -->
+    <!-- <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                Music:'Music off',
+            },
+            methods: {
+                open(){
+                    let audio = document.getElementById('music1');
+                    let bar = document.querySelectorAll(".bar");
+                    let iframe = document.getElementById('iframeAudio');
+
+                    if (audio.paused) {
+                        audio.play();
+                        
+                        this.Music = 'Music on';
+                        bar.forEach((item) => {
+                            item.classList.remove('hide');
+                    });
+                    } else {
+                        audio.pause();
+                        this.Music = 'Music off';
+                        bar.forEach((item) => {
+                            item.classList.add('hide');
+                    });
+                        iframe.remove();
+                    }
+                },
+            },
+        });  
+    </script> -->
+    <script src='./assets/js/music.js'></script>
+
+    <!-- searchBar -->
+    <script>
+        var sb = new Vue({
+            el: '#searchBarALL',
+            data: {
+                searchBarPage: false,
+                searchBarBg: false,
+            },
+            methods: {
+                searchBarOpen(){
+                    this.searchBarPage = true;
+                    this.searchBarBg = true;
+                },
+                searchBarClose(){
+                    this.searchBarPage = false;
+                    this.searchBarBg = false;
+                },
+            },
+        });
+    </script>
+    
+    <script>
+        $(".textAni").textillate({
+            in: {
+                effect: 'flipInY',
+            },
+            out: {
+                effect: 'flipInY',
+                },
+            // autoStart: true,
+            type: 'char',
+            callback: function () {},
+        });
+        
+        $(".exBtn").hover(function(){
+            $(".textAni").textillate('start');
+        });
+
+    </script>
+    
+    
+    <!-- <script src="./assets/js/exhibition.js"></script> -->
+    <script src="./assets/js/loginFB.js"></script>
+    <script src="./assets/js/loginGoogle.js"></script>
+    <script src='./assets/js/verify.js'></script>
+    <script src='./assets/js/logIn.js'></script>
+    <script src='./assets/js/search_all.js'></script>
+
+    </body>
+</html>

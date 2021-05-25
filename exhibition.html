@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Exhibition</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Montserrat:wght@300&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel=" stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href='./assets/css/pages/signin.css'>
+    <link rel=" stylesheet" href="./assets/css/pages/exhibition.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <!-- google -->
+    <!-- <meta name="google-signin-scope" content="profile email"> -->
+    <meta name="google-signin-client_id"
+        content="5123688312-hh38n162r8fqfrd31n2a2hid0q7pk7uf.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+
+    <!-- CURSOR STYLE -->
+    <!-- <div class="cursor"></div>
+    <div class="cursor-outside"></div> -->
+
+    <!-- LINK STYLE -->
+    <!-- <a href="#" class="mousehover"></a> -->
+
+    <!-- biddingBtn -->
+    <div class="biddingBtn">
+        <div class="biddingContent">
+            <img src="./assets/img/IconSpeaker.png">
+            <a href="./bidding.html">
+                <ul>
+                    <li>競標活動開始！</li>
+                    <li>由此進入</li>
+                </ul>
+            </a>
+        </div>
+    </div>
+    
+    <header class="indexSideBar">
+    <a class="logoForIndex mousehover" href="../dist/homepage.html">
+        <img src="./assets/img/logo_bowu_white.png">
+    </a>
+
+    <menu class="menu mousehover">
+        <p>MENU</p>
+        <div class="menuOpenCloseAni">
+            <span class="indexMenuline1"></span>
+            <span class="indexMenuline2"></span>
+        </div>
+    </menu>
+
+    <div class="smallSize_menuOpenCloseAni">
+        <span class="smallSize_indexMenuline1"></span>
+        <span class="smallSize_indexMenuline2"></span>
+    </div>
+
+    <!-- 選單頁面 -->
+    <div class="menu_bar none">
+
+        <div class="menuGsapLine"></div>
+        <div class="smallSizeCloseBtn">
+            <div></div>
+        </div>
+
+        <div class="exhibits-title-outer mousehover">
+            <div class="exhibits-titleHover"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL
+                    EXHIBITS</a></div>
+            <div class="exhibits-title"><a href="./exhibition.html" class="menu_personal_exhibits">PERSONAL EXHIBITS</a>
+            </div>
+        </div>
+
+        <div class="menu_about menu_child">
+            <a class="mousehover" href="../dist/About.html">
+                <img src="./assets/img/menu_about.png">
+                About
+            </a>
+        </div>
+
+        <div class="menu_exhibits menu_child">
+            <a class="mousehover" href="../dist/exhibition.html">
+                <img src="./assets/img/menu_exhibits.png" alt="">Exhibits</a>
+        </div>
+
+        <div class="menu_postcard menu_child">
+            <a class="mousehover" href="../dist/postcard.html">
+                <img src="./assets/img/menu_postcard.png" alt="">PostCard</a>
+        </div>
+
+        <div class="notthings menu_child">
+            <a href=""></a>
+        </div>
+
+        <div class="join mousehover">
+            <div class="line"></div>
+            <div class="join-title-outer">
+                <div class="join-title"><a href="##">JOIN US NOW</a></div>
+                <div class="join-titleHover"><a href="##">JOIN US NOW</a></div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li> <a href="#" class="mousehover">SHARE</a> </li>
+        <b></b>
+        <li> <a href="./About.html" class="mousehover">CONTACT US</a> </li>
+    </ul>
+</header>
+
+
+<div class="sharingBoxAll" style="display: none;">
+    <div class="sharingBoxBg"></div>
+    <div class="sharingBox">
+        <p>
+            SHARING BOWU-MUSEUM<br> WITH YOUR FRIEND!
+        </p>
+        <div class="sharingBtn">
+            <ul class="share-buttons" data-source="simplesharingbuttons.com">
+                <li><a class="mousehover" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F10.2.0.172%2Fdist%2F&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+                <li><a class="mousehover" href="https://twitter.com/intent/tweet?source=http%3A%2F%2F10.2.0.172%2Fdist%2F&text=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+                <li><a class="mousehover" href="https://plus.google.com/share?url=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+                <li><a class="mousehover" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F10.2.0.172%2Fdist%2F&title=&summary=&source=http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a></li>
+                <li><a class="mousehover" href="mailto:?subject=&body=:%20http%3A%2F%2F10.2.0.172%2Fdist%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- <header>
+        <a href="#">
+            <img src="./img/logo_bowu_white.png">
+        </a>
+
+        <menu class="menu">
+            <p>MENU</p>
+            <span class="indexMenuline1"></span>
+            <span class="indexMenuline2"></span>
+        </menu>
+
+        <ul>
+            <li> <a href="#">SHARE</a> </li>
+            <b></b>
+            <li> <a href="#">CONTACT US</a> </li>
+        </ul>
+
+    </header> -->
+
+    <!-- <div class="menu_bar none">
+        <a href="" class="menu_personal_exhibits">PERSONAL EXHIBITS</a>
+        <div class="menu_about menu_child">
+            <a href="">
+                <img src="./img/menu_about.png" alt="">
+                About
+            </a>
+        </div>
+        <div class="menu_exhibits menu_child">
+            <a href="./exhibition.html">
+                <img src="./img/menu_exhibits.png" alt="">Exhibits</a>
+        </div>
+        <div class="menu_postcard menu_child">
+            <a href="./postcard.html">
+                <img src="./img/menu_postcard.png" alt="">PostCard</a>
+        </div>
+        <div class="notthings menu_child">
+            <a href=""></a>
+        </div>
+        <div class="join">
+            <div class="line"></div>
+            <a href="##">JOIN US NOW</a>
+        </div>
+    </div> -->
+
+    <!-- <div class="features">
+    <i class="fas fa-search"></i>
+    <div class="personal"><a href="./exhibition.html">個人展間</a>
+    </div>
+
+
+    <div class="login"><a href="###" class="login_manger">管理</a>
+        <i class="fas fa-user-friends"></i>
+    </div>
+
+    <i class="fas fa-bell"></i>
+</div> -->
+
+<div id="searchBarALL">
+    <div class="searchBarBlack" @click="searchBarClose" :class="{'-active': searchBarBg}"></div>
+    <div class="features">
+
+        <i class="fas fa-search" @click="searchBarOpen"></i>
+
+        <div id="searchBar" :class="{'-active': searchBarPage}">
+            <div class="searchBarTop">
+
+                <div class="searchTitle">
+                    <i class="fas fa-search"></i>
+                    <p> Search </p>
+                </div>
+
+                <input type="text" name="searchArea" id="searchBarInput">
+                <img class="searchBarArrow" src="./assets/img/Icon_arrowRight.png">
+
+            </div>
+
+            <div class="notSearch">
+                <img src="./assets/img/searchBarImg.png">
+                <h4 class="no_search">
+                    Type something to search...
+                </h4>
+                <h4 class="no_fouund none">
+                    No results found for query "..."
+                </h4>
+            </div>
+
+            <ul class="searchBar_Found">
+                <!-- <li class="searchBar_item"> <div class="personalRoom"></div> <a href="#">Andy's personal exhibits </a> </li>
+                <li class="searchBar_item"> <a href="#">Andy's works </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li>
+                <li class="searchBar_item"> <a href="#">A ....  </a> </li> -->
+            </ul>
+        </div>
+
+        <div class="personal">
+            <a href="./exhibition.html">個人展間</a>
+        </div>
+
+        <div class="logInOption">
+            <div class="login">
+                <a href="###" class="login_manger">登入</a>
+                <ul>
+                    <li>
+                        <a href="###" class="manger close">管理</a>
+                        <ul>
+                            <li><a href="###" class="logOut close">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="fas fa-user-friends"></i>
+            </div>
+        </div>
+
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
+
+
+<div class="panel panel--static close" id="app2">
+    <div class="panel__content left">
+        <h1 class="panel__heading">Don't have an account?</h1>
+        <p class="panel__copy">免費創辦帳號, 立即成為勃塢會員, 即可上傳自己創作之展覽品, 與各全國藝術家交流, 或是參觀展品<br><br>升級會員可享更多福利 !</p>
+        <button type="button" class="btn btn--secondary signup">Sign up</button>
+    </div>
+    <div class="panel__content right">
+        <h1 class="panel__heading">Have an account?</h1>
+        <p class="panel__copy">已經有帳號了嗎?<br><br> 歡迎點此直接登入, 進入自己的會員展間, 管理館藏及訂閱高級會員</p>
+        <button type="button" class="btn btn--secondary login">Log in</button>
+    </div>
+    <div class="panel panel--sliding">
+        <div class="panel__content signup">
+            <h1 class="panel__heading">Sign up</h1>
+            <form id="signup" method="POST" action="./assets/php/front/JoinR.php">
+
+                <div><input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                        :class="{ 'is-invalid': usernameError }" v-model="name" />
+                    <p>{{userErrMsg}}</p>
+                </div>
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <br />
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+                <br />
+                <button class="btn btn--primary" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <!-- <div class="fb-login-button" onclick="facebookLogIn()" data-width="120px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel__content login">
+            <h1 class="panel__heading">Log in</h1>
+            <form id="login" method="POST" action="./assets/php/front/LoginR.php">
+                <div><input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                        :class="{ 'is-invalid': mailError }" v-model="mail" />
+                    <p>{{mailErrMsg}}</p>
+                </div>
+                <div><input type="password" placeholder="Password" id='password' class="input input--password"
+                        name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                    <p>{{passErrMsg}}</p>
+                </div>
+                <button class="btn btn--primary" @click='checkLog($event)'>Log in</button>
+                <a href="###">Forgot password?</a>
+            </form>
+            <div class="faceGoogle">
+                <div class="googleTitle">
+                    <div></div>
+                    <p>or sign in with</p>
+                    <div></div>
+                </div>
+                <div class="pic">
+                    <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                    <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="paenl form-wrap close" id="app3">
+    <div class="tabs">
+        <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+        <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+    </div>
+    <!--.tabs-->
+
+    <div class="tabs-content">
+        <div id="signup-tab-content" class="active">
+            <form class="signup-form" action="./assets/php/front/JoinR.php" method="post">
+                <input type="text" placeholder="Full name" id="name" class="input input--name" name='name'
+                    :class="{ 'is-invalid': usernameError }" v-model="name" />
+                <p>{{userErrMsg}}</p>
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1" @click='checkSign($event)'>Sign up</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <label class="rule"><input type="checkbox" class="input--agree" value="agree">已閱讀會員守則，並同意遵守</label>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.signup-tab-content-->
+
+        <div id="login-tab-content" class="close">
+            <form class="login-form" action="./assets/php/front/LoginR.php" method="post">
+                <input type="text" placeholder="Email" id="mail" class="input input--email" name="mail"
+                    :class="{ 'is-invalid': mailError }" v-model="mail" />
+                <p>{{mailErrMsg}}</p>
+                <input type="password" placeholder="Password" id='password' class="input input--password"
+                    name="password" :class="{ 'is-invalid': passwordError }" v-model="password" />
+                <p>{{passErrMsg}}</p>
+                <button class="button1 btn--primary" @click='checkLog($event)'>Log in</button>
+            </form>
+            <!--.login-form-->
+            <div class="help-text">
+                <p><a href="#">Forget your password?</a></p>
+            </div>
+            <!--.help-text-->
+            <div class="pic">
+                <i class="fab fa-facebook-square" id="facebook" onclick="facebookLogIn()"></i>
+                <div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </div>
+        <!--.login-tab-content-->
+    </div>
+    <!--.tabs-content-->
+</div>
+
+<div class="loginClose" style="position: fixed;top: 0;left: 0;
+width: 100vw;height: 100vh; opacity: 0.5;background-color: black; display: none;z-index: 50;"></div>
+    <!-- <div class="features">
+        <i class="fas fa-search"></i>
+        <div class="personal"><a href="">個人展間</a>
+        </div>
+
+
+        <div class="login"><a href="" class="login_manger">管理</a>
+            <i class="fas fa-user-friends"></i>
+        </div>
+
+        <i class="fas fa-bell"></i>
+    </div> -->
+
+    <div class="main_exhibition">
+        <div class="exhibition_title">
+            <h1><span>會員展間</span> Member Exhibits</h1>
+            <div class="bottom_line"></div>
+            <h2>Easy Way To Show yor masterpieces!</h2>
+            <p> 在這裡，有來自全國各地的藝術家們，分享、交流不同的藝術展品。<br>
+                有好的展品想要跟眾人分享嗎？ 歡迎加入會員找到自己的空間與天地 ! 也請參觀的各位不令吝的給予留言、評論及按讚。</p>
+        </div>
+        <div class="exhibition_img">
+            <i class="fas fa-chevron-left"></i>
+            <ul>
+                <!-- <li class="pic_cover_left"><a href=""><img src="./assets/img/exhibition/level_1_1.png"></a></li>
+                <li class="pic_cover"><a href=""><img src="./assets/img/exhibition/level_1_2.png"></a></li>
+                <li class="pic_cover_1"><a href=""><img src="./assets/img/exhibition/level_1_3.png"></a></li>
+                <li class="pic_cover_right"><a href=""><img src="./assets/img/exhibition/level_1_4.png"></a>
+                </li> -->
+            </ul>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="exhibition_bottom">
+            <div class="exhibition_bottom_pic">
+                <ul class="work_ul">
+                    <!-- <li class="exb_pic">
+                        <img src="./assets/img/exhibition/exh_1.jpg" alt="">
+                        <div class="product_like">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart none"></i>
+                            <span>102</span>
+                            <a href="">share</a>
+                        </div>
+                    </li> -->
+                </ul>
+                <!-- <div class="pic1">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_4.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_1.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pic2">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_16.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_6.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pic3">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_14.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_13.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/exhibition/exh_15.jpg" alt="">
+                            <div class="product_like">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart none"></i>
+                                <span>102</span>
+                                <a href="">share</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div> -->
+            </div>
+            <div class="exhibition_tag">
+                <h3>Tags 標籤搜尋器</h3>
+                <div class="tag_btn">
+                    <button value="宇宙">Universe</button>
+                    <button value="海洋">Ocean</button>
+                    <button value="森林">Forest</button>
+                    <button value="地底">Ground</button>
+                    <button value="新奇">Design</button>
+                    <button value="流行">Fashion</button>
+                    <button value="化石">OldStyle</button>
+                    <button value="動物">Animal</button>
+                    <button value="植物">Plant</button>
+                    <button value="故事">Drama</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exhibition_content none">
+        <!-- <img src="./assets/img/exhibition/exh_4.jpg" alt="">
+        <div class="product">
+            <h1>Tea-pot</h1>
+            <h2>Andy</h2>
+            <p>this's a story about love and brave tory about love and tory about love and...</p>
+            <div class="product_like">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart none"></i>
+                <span>102</span>
+                <a href="">share</a>
+            </div>
+            <i class="far fa-times-circle"></i>
+        </div> -->
+
+    </div>
+    <div class="exhibition_cover none"></div>
+    <div class="musicControlBtn" id="app">
+  <div class="musicControlBtnSpan" @click="open">
+    <span class="bar line1 hide"></span>
+    <span class="bar line2 hide"></span>
+    <span class="bar line3 hide"></span>
+    <div class="audio">
+      <audio loop="loop" id="music1" src="./assets/music/music1.mp3"></audio>
+    </div>
+  </div>
+  <p>{{Music}}</p>
+</div>
+
+    <!-- <div class="musicControlBtn">
+        <div class="musicControlBtnSpan">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+        <p>Music on/ off</p>
+    </div> -->
+
+    <!-- <footer>
+        <ul>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">Exhibits</a></li>
+            <li><a href="#">PostCard</a></li>
+        </ul> -->
+
+    <footer>
+    <ul>
+        <li><a href="./About.html">AboutUs</a></li>
+        <li><a href="./exhibition.html">Exhibits</a></li>
+        <li><a href="./postcard.html">PostCard</a></li>
+    </ul>
+
+    <div class="footerLogo">
+        <a href="#">
+            <img src="./assets/img/logo_bowu_white.png" width="55px" height="55px">
+            <p>　BO WU MUSEUM</p>
+        </a>
+    </div>
+
+    <ol>
+        <li><a href="#">Rules</a></li>
+        <li><a href="#"><img src="./assets/img/IconFacebook.png"></a></li>
+        <li><a href="#"><img src="./assets/img/IconInstagram.png"></a></li>
+        <li><a href="#"><img src="./assets/img/IconYoutube.png"></a></li>
+    </ol>
+</footer>
+    <!-- <div class="footerLogo">
+            <a href="#">
+                <img src="./img/logo_bowu_white.png" width="55px" height="55px">
+                <p>　BO WU MUSEUM</p>
+            </a>
+        </div>
+
+        <ol>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#"><img src="./img/IconFacebook.png"></a></li>
+            <li><a href="#"><img src="./img/IconInstagram.png"></a></li>
+            <li><a href="#"><img src="./img/IconYoutube.png"></a></li>
+        </ol>
+    </footer> -->
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/loginFB.js"></script>
+    <script src="./assets/js/loginGoogle.js"></script>
+    <script src='./assets/js/music.js'></script>
+    <script src='./assets/js/verify.js'></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/search_all.js"></script>
+    <script src='./assets/js/logIn.js'></script>
+    <script src="./assets/js/exhibition.js"></script>
+    <!-- 滑鼠設定 -->
+    <!-- <script>
+        var circle = document.getElementsByClassName('cursor')[0];
+        var circleOut = document.getElementsByClassName('cursor-outside')[0];
+        // console.log(circle);
+
+        function moveCircle(e) {
+            TweenMax.to(circle, 1, {
+                css: {
+                    left: e.pageX,
+                    top: e.pageY
+                },
+                ease: Elastic.easeOut
+            });
+            TweenMax.to(circleOut, 1, {
+                css: {
+                    left: e.pageX,
+                    top: e.pageY
+                },
+                delay: .05,
+                ease: Elastic.easeOut
+            });
+        };
+
+        $(window).on('mousemove', moveCircle);
+
+        $('.mousehover').mouseenter(function (e) {
+            TweenMax.to(circle, 0.2, {
+                scale: 5,
+                backgroundColor: '#e5e5e5a2'
+            });
+        });
+
+        $('.mousehover').mouseleave(function (e) {
+            TweenMax.to(circle, 0.2, {
+                scale: 1,
+                backgroundColor: 'rgb(175, 175, 175)'
+            });
+        });
+
+    </script> -->
+
+</body>
+
+</html>
