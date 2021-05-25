@@ -20,11 +20,10 @@ jQuery           |        |                      |          |         |         
 
 
 ## 團體專案負責項目
+###切版
 登入頁面  | 高級會員展間 | 競標頁面 |
 :---------------:|:------:|:--------------------:|
-![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif) | ![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif)| ![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif)|
-
-
+![image](https://github.com/shang-jui/group/blob/master/group-login.gif) | ![image](https://github.com/shang-jui/group/blob/master/group-highmember.gif)| ![image](https://github.com/shang-jui/group/blob/master/group-bidding.gif) |
 
 
 ## Webstie Demo
