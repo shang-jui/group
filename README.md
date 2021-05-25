@@ -11,28 +11,21 @@ A website that users easier exhibit works to more people.
 - Password : 123456
 
 ## Technologies
-### Front-End Basic
-- HTML
-- CSS
-- JavaScript(ES6)
-- jQuery
-### Layout
-- Responsive Web Design (RWD)
-- Flexbox
-### Front-End Frameworks
-- Vue
-- SCSS
-### Back-End 
-- PHP
-### Database
-- MySQL
-### Tool for Development
-- Node Package Manager (NPM)
-### Other
-- Version Control : Git / GitHub
-- Canvas
-- WebStorage
+Front-End Basic  | Layout | Front-End Frameworks | Back-End | Database|Tool for Development         |Other                         |
+:---------------:|:------:|:--------------------:|:--------:|:-------:|:---------------------------:|:----------------------------:|
+HTML             | RWD    | Vue                  | PHP      | MySQL   |Node Package Manager (NPM)   |Version Control : Git / GitHub|
+CSS              | Flexbox| SCSS                 |          |         |                             |Canvas                        |
+JavaScript(ES6)  |        |                      |          |         |                             |WebStorage                    |
+jQuery           |        |                      |          |         |                             |                              |
+
+
+## 團體專案負責項目
+登入頁面  | 高級會員展間 | 競標頁面 |
+:---------------:|:------:|:--------------------:|
+![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif) | ![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif)| ![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif)|
+
+
 
 
 ## Webstie Demo
-![image](https://github.com/shang-jui/react-todolist/blob/master/Todolist.gif)
+![image](https://github.com/shang-jui/JS-todolist/blob/master/JS-todolist.gif)
