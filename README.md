@@ -69,6 +69,7 @@ jQuery           |        |                      |          |         |         
   - 即時更新資料庫(MySQL)(個人資訊、作品資訊、按讚人數、瀏覽人數、留言數、上架區作品及作品儲存區)
 ### 會員註冊、登入-一般登入
 ![image](https://github.com/shang-jui/group/blob/master/group-normalLogin.gif)
+- 使用Vue框架實現正規表達式
 - 建置PHP實現會員一般註冊及登入
 - 使用WebStorage記錄會員資料及登出系統
 ### 會員註冊、登入-FB登入
@@ -79,3 +80,8 @@ jQuery           |        |                      |          |         |         
 ![image](https://github.com/shang-jui/group/blob/master/group-GoogleLogin.gif)
 - 串接 Google API 實現第三方登入並搭配PHP實現註冊及登入
 - 使用WebStorage記錄會員資料及登出系統
+### 音樂播放
+![image](https://github.com/shang-jui/group/blob/master/group-Music.gif)
+- 實現音樂播放
+- 使用Vue框架控制是否撥放
+
