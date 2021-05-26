@@ -55,10 +55,12 @@ jQuery           |        |                      |          |         |         
 - 使用原生JS撰寫左右選擇輪播圖
 - 分享功能
 - 線上留言板
+- 訂閱功能(能即時透過Mail收到作者發佈的新作品)
 - 建置PHP搭配AJAX方法
   - 載入作品於資料庫(MySQL)即時資訊(作品內容、按讚人數、是否訂閱、留言板)
   - 即時更新資料庫(MySQL)(按讚人數、是否訂閱、留言資訊)
 ### 高級會員後台
+![image](https://github.com/shang-jui/group/blob/master/group-highmemberback.gif)
 
 
 
