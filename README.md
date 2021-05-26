@@ -25,7 +25,7 @@ jQuery           |        |                      |          |         |         
 :---------------:|:------:|:--------------------:|
 ![image](https://github.com/shang-jui/group/blob/master/group-login.gif) | ![image](https://github.com/shang-jui/group/blob/master/group-highmember.gif)| ![image](https://github.com/shang-jui/group/blob/master/group-bidding.gif) |
 ### 功能
-明信片               | 高級會員展間 | 高級會員後台| 登入              | 其他|
+明信片               | 高級會員展間 | 高級會員後台| 會員註冊、登入       | 其他|
 :-------------------:|:----------:|:----------:|:-------------------:|:-------------------:|
 簡易畫板              | 左右輪播圖  |個人資訊修改  |一般登入             |音樂播放             |
 可填文字方塊          | 按讚        |作品上傳、刪除|第三方登入(FB、Google)|                    |
@@ -61,6 +61,14 @@ jQuery           |        |                      |          |         |         
   - 即時更新資料庫(MySQL)(按讚人數、是否訂閱、留言資訊)
 ### 高級會員後台
 ![image](https://github.com/shang-jui/group/blob/master/group-highmemberback.gif)
-
+- 作品上傳、刪除作品
+- 作品自由上、下架(上架會使用email通知有訂閱此作者的人)
+- 可修改作品及個人資料
+- 建置PHP搭配AJAX方法
+  - 載入個人資料及作品於資料庫(MySQL)即時資訊(個人資訊、作品資訊、按讚人數、瀏覽人數、留言數、上架區作品及作品儲存區)
+  - 即時更新資料庫(MySQL)(個人資訊、作品資訊、按讚人數、瀏覽人數、留言數、上架區作品及作品儲存區)
+### 會員註冊、登入-一般登入
+### 會員註冊、登入-FB登入
+### 會員註冊、登入-Google登入
 
 
