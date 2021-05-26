@@ -68,8 +68,14 @@ jQuery           |        |                      |          |         |         
   - 載入個人資料及作品於資料庫(MySQL)即時資訊(個人資訊、作品資訊、按讚人數、瀏覽人數、留言數、上架區作品及作品儲存區)
   - 即時更新資料庫(MySQL)(個人資訊、作品資訊、按讚人數、瀏覽人數、留言數、上架區作品及作品儲存區)
 ### 會員註冊、登入-一般登入
-
+![image](https://github.com/shang-jui/group/blob/master/group-normalLogin.gif)
+- 建置PHP實現會員一般註冊及登入
+- 使用WebStorage記錄會員資料及登出系統
 ### 會員註冊、登入-FB登入
+![image](https://github.com/shang-jui/group/blob/master/group-FBLogin.gif)
+- 串接 FB API 實現第三方登入並搭配PHP實現註冊及登入
+- 使用WebStorage記錄會員資料及登出系統
 ### 會員註冊、登入-Google登入
-
-
+![image](https://github.com/shang-jui/group/blob/master/group-GoogleLogin.gif)
+- 串接 Google API 實現第三方登入並搭配PHP實現註冊及登入
+- 使用WebStorage記錄會員資料及登出系統
